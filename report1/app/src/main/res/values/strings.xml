@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">report1</string>
+    <string name="input">전달할 문자열 입력</string>
+    <string name="input_num">숫자입력(1~4)</string>
+</resources>
