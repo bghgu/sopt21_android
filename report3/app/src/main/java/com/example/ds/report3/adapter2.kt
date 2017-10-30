@@ -5,10 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 /**
  * Created by ds on 2017-10-29.
  */
+
 class adapter2(var dataList : ArrayList<data2>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val TYPE_HEADER : Int = 0
@@ -48,9 +50,14 @@ class adapter2(var dataList : ArrayList<data2>?) : RecyclerView.Adapter<Recycler
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         if(holder is viewHolder2) {
             var itemHolder : viewHolder2? = holder
+            Log.d("ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ", position.toString())
             itemHolder!!.imgae.setImageResource(dataList!!.get(position-1).image)
             itemHolder!!.type.setText(dataList!!.get(position-1).type)
             itemHolder!!.name.setText(dataList!!.get(position-1).name)
+        }else if(holder is headerHolder){
+            var itemHolder : headerHolder? = holder
+        }else if(holder is footerHolder) {
+            var itemHolder : footerHolder? = holder
         }
     }
 

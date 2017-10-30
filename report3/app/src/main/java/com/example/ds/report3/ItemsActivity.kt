@@ -42,7 +42,7 @@ class ItemsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val idx : Int = item_list!!.getChildAdapterPosition(v)
+        val idx : Int = item_list!!.getChildAdapterPosition(v)-1
 
         val intent = Intent(applicationContext, SetProfileActivity::class.java)
         intent.putExtra("photo", data!!.get(idx).image)
