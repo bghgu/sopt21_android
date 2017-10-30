@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">report3</string>
+    <string name="btn_1">복습</string>
+    <string name="btn_2">응용/심화</string>
+    <string name="yellow">피카츄</string>
+    <string name="blue">꼬부기</string>
+    <string name="red">파이리</string>
+    <string name="green">이상해씨</string>
+    <string name="pink">삐삐</string>
+    <string name="previous">이전</string>
+</resources>

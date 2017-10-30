@@ -9,14 +9,14 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    var id : String = ""
-    var passwd : String = ""
+    var id: String = ""
+    var passwd: String = ""
 
-    var getText_id : String? = ""
-    var getText_passwd : String? = ""
-    var getText_name : String? = ""
-    var getText_major : String? = ""
-    var photo : Int = 0
+    var getText_id: String? = ""
+    var getText_passwd: String? = ""
+    var getText_name: String? = ""
+    var getText_major: String? = ""
+    var photo: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,26 +36,26 @@ class LoginActivity : AppCompatActivity() {
         photo = getInt(this, "photo")
 
         btn_login.setOnClickListener {
-            if(getText_id == "") {
+            if (getText_id == "") {
                 val alert = AlertDialog.Builder(this)
                 alert.setTitle("회원정보가 없습니다.")
                 alert.setNeutralButton("닫기", null)
                 alert.create().show()
-            }else {
+            } else {
                 id = input_id!!.text.toString()
                 passwd = input_passwd!!.text.toString()
-                if(id != getText_id) {
+                if (id != getText_id) {
                     val alert = AlertDialog.Builder(this)
                     alert.setTitle("아이디가 틀렸습니다.")
                     alert.setNeutralButton("닫기", null)
                     alert.create().show()
-                }else {
-                    if(passwd != getText_passwd) {
+                } else {
+                    if (passwd != getText_passwd) {
                         val alert = AlertDialog.Builder(this)
                         alert.setTitle("비밀번호가 틀렸습니다.")
                         alert.setNeutralButton("닫기", null)
                         alert.create().show()
-                    }else {
+                    } else {
                         val intent = Intent(applicationContext, ResultActivity::class.java)
                         intent.putExtra("getText_id", getText_id)
                         intent.putExtra("getText_passwd", getText_passwd)
