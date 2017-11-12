@@ -15,9 +15,9 @@ class ItemsActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items)
-
+        //리사이클러뷰 레이아웃 설정
         item_list.layoutManager = LinearLayoutManager(this)
-
+        //데이터 생성 및 삽입
         data = ArrayList<data2>()
         data!!.add(data2(R.drawable.yellow, "전기타입", "피카츄"))
         data!!.add(data2(R.drawable.blue, "물타입", "꼬부기"))
